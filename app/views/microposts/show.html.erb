@@ -7,7 +7,7 @@
 
 <p>
   <b>User:</b>
-  <%= @micropost.user_id %>
+  <%= User.find_by_id(@micropost.id).nil? ? @micropost.id : User.find_by_id(@micropost.id).name %>
 </p>
 
 
